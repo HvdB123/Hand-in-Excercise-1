@@ -44,26 +44,23 @@ def xn_vs_t_2(R_values, n1=100, n2=200, x0=0.5):
         plt.title(f"R = {round(R,4)}, x_0 = {x0}")
         plt.show()
 
-#question 3
-x0_values = [0.01, 0.05, 0.1, 0.5]
-print(xn_vs_t_1(3.1, x0_values))
-
-x0_values = [0.01, 0.05, 0.1, 0.5]
-print(xn_vs_t_1(3.49, x0_values))
+#question 4
+R_values = np.arange(3.54,3.56,0.001)
+print(xn_vs_t_2(R_values))
 
 """
 below are all the commands to run the code for the particular questions.
 
 
 #question 2
-x0_values = [0.01, 0.05, 0.1, 0.5]
+x0_values = [0.01, 0.1, 0.5]
 print(xn_vs_t_1(2.9, x0_values))
 
 #question 3
-x0_values = [0.01, 0.05, 0.1, 0.5]
+x0_values = [0.01, 0.1, 0.5]
 print(xn_vs_t_1(3.1, x0_values))
 
-x0_values = [0.01, 0.05, 0.1, 0.5]
+x0_values = [0.01, 0.1, 0.5]
 print(xn_vs_t_1(3.49, x0_values))
 
 #question 4
