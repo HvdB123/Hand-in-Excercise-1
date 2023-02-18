@@ -12,12 +12,11 @@ def fillit(n1,n2,x0,R):
     x = x0
     z = np.zeros(n2 - n1)
     t = np.arange(0, n2 - n1)
-    for i in range(0, n1):
-        x = logistic(x, R)
     for i in range(0, n2 - n1):
         x = logistic(x, R)
-        z[i] = x
+        z[i] = np.clip(x, 0, 1)  # clip the output values between 0 and 1
     return t, z
+
 
 
 #this function plots xn vs t, with changing initial conditions (x0)
@@ -45,7 +44,12 @@ def xn_vs_t_2(R_values, n1=100, n2=200, x0=0.5):
         plt.title(f"R = {round(R,4)}, x_0 = {x0}")
         plt.show()
 
+#question 3
+x0_values = [0.01, 0.05, 0.1, 0.5]
+print(xn_vs_t_1(3.1, x0_values))
 
+x0_values = [0.01, 0.05, 0.1, 0.5]
+print(xn_vs_t_1(3.49, x0_values))
 
 """
 below are all the commands to run the code for the particular questions.
